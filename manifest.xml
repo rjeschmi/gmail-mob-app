@@ -1,0 +1,23 @@
+<Extension id="from" type="contextExtractor">
+    <Name>Email List</Name>
+    <Url>google.com:ListExtractor</Url>
+    <Param name="list_id" value="brewers@lists.barleyment.ca"/>
+    <Triggers ref="bossIsCalling"/>
+    <Scope ref="list_scope"/>
+    <Container name="mail"/>
+</Extension>
+
+<Extension id="MoBGadget" type="gadget">
+    <Name>MoBGadget</Name>
+    <Url>_http://example.com/gadgets/mygadget.xml_</Url>
+    <Container name="mail"/>
+    <!-- Uncomment this to enable Caja. -->
+    <!-- Param name="caja" value="enabled"/> -->
+</Extension>
+
+
+<Scope id="list_scope">
+    <Url>tag:google.com,2010:auth/contextual/extractor/LIST_ID</Url>
+    <Reason>Just the list id</Reason>
+</Scope>
+
